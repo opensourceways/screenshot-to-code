@@ -5,8 +5,8 @@ from typing import TypedDict
 # Actual model versions that are passed to the LLMs and stored in our logs
 class Llm(Enum):
     # GPT
-    GPT_4_1_2025_04_14 = "gpt-4.1-2025-04-14"
-    GPT_5_2_2025_12_11 = "gpt-5.2-2025-12-11"
+    GPT_4_1_2025_04_14 = "gpt-4.1"
+    GPT_5_2_2025_12_11 = "gpt-5.2"
     # Claude
     CLAUDE_4_5_SONNET_2025_09_29 = "claude-sonnet-4-5-20250929"
     CLAUDE_4_5_OPUS_2025_11_01 = "claude-opus-4-5-20251101"

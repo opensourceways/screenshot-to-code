@@ -3,7 +3,7 @@ export const IS_RUNNING_ON_CLOUD =
   import.meta.env.VITE_IS_DEPLOYED === "true" || false;
 
 export const WS_BACKEND_URL =
-  import.meta.env.VITE_WS_BACKEND_URL || "ws://openeuler-auto-front-gen.test.osinfra.cn/backend";
+  import.meta.env.VITE_WS_BACKEND_URL || "wss://openeuler-auto-front-gen.test.osinfra.cn/backend";
 
 export const HTTP_BACKEND_URL =
   import.meta.env.VITE_HTTP_BACKEND_URL || "https://openeuler-auto-front-gen.test.osinfra.cn/backend";

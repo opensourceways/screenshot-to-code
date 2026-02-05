@@ -3,6 +3,9 @@ FROM node:22-bullseye-slim
 # Set the working directory in the container
 WORKDIR /app
 
+RUN apt-get update && \
+    apt-get install -y curl 
+
 # Copy package.json and yarn.lock
 COPY package.json yarn.lock /app/
 

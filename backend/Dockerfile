@@ -8,7 +8,7 @@ RUN pip install "poetry==$POETRY_VERSION"
 # Set work directory
 WORKDIR /app
 
-RUN useradd appuser -m -u 1000 appuser 
+RUN useradd -m -u 1000 appuser 
 
 # Copy only requirements to cache them in docker layer
 COPY poetry.lock pyproject.toml /app/

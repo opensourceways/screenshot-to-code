@@ -8,7 +8,6 @@ RUN pip install "poetry==$POETRY_VERSION"
 # Set work directory
 WORKDIR /app
 
-RUN useradd -m -u 1000 appuser 
 
 # Copy only requirements to cache them in docker layer
 COPY poetry.lock pyproject.toml /app/
@@ -22,7 +21,6 @@ RUN poetry install
 # Copy the current directory contents into the container at /app
 COPY ./ /app/
 
-USER appuser
 
 EXPOSE 7001
 

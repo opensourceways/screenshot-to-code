@@ -2,9 +2,14 @@
 # Setting to True will stream a mock response instead of calling the OpenAI API
 # TODO: Should only be set to true when value is 'True', not any abitrary truthy value
 import os
+from dotenv import load_dotenv
 
 NUM_VARIANTS = 4
 NUM_VARIANTS_VIDEO = 2
+
+config_path_env = os.environ.get("CONFIG_PATH", None)
+env_path = os.environ.get(config_path_env) if config_path_env else None
+load_dotenv(env_path)
 
 # LLM-related
 OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY", None)
